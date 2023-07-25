@@ -3,31 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  
+  <link rel="stylesheet" href="main.css">
   <title> E-commerce Product Page</title>
-
 </head>
 <body>
+  <!-- Navigation bar -->
+  <nav>
+    <!-- Logo -->
+    <img src="/images/logo.svg" alt="" class="nav-bar" id="logo">
+    <div class="nav-links">
+      <a href="" class="nav-bar"> Collections </a>
+      <a href="" class="nav-bar"> Men </a>
+      <a href="" class="nav-bar"> Women </a>
+      <a href="" class="nav-bar"> About </a>
+      <a href="" class="nav-bar"> Contact </a>
+    </div>
+    <div class="nav-icons">
+      <img src="/images/icon-cart.svg" alt="" class="nav-bar">
+      <img src="/images/image-avatar.png" alt="" class="nav-bar" id="profile">
+    </div>
+  </nav>
+  <hr>
+  <main>
+    <div class="image-modal">
+        <!-- TODO Set up the modal  -->
+    </div>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+    <div class="product-info">
+      <!-- Product information -->
+      <p class="company-name">Sneaker Company</p>
+      <h1> Fall Limited Edition Sneakers </h1>
+      <p> These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer. </p>
 
-  Sneaker Company
+      <!-- Pricing -->
+      <h2> $125.00 </h2>
+      <p class="discount"> 50% </p>
+      <p class="original-price"> $250.00</p>
 
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
+      <!-- Add item to cart functionality -->
+      <div class="add-product">
+        <!-- TODO Replace the buttons with the icons for plus and minus -->
+        <button id="minus">−</button>  
+        <input value="0" id="input"/>
+        <button id="plus">+</button>
+        <button> <img src="/images/icon-cart.svg" id="cart-icon"> Add to cart </button>
+      </div>
+    </div>
+    
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
