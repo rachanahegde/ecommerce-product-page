@@ -27,6 +27,15 @@ hr {
     margin-top: 30px;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin: 0 auto;  /* For centering the container */
+    margin-top: 75px;
+    width: 60%;
+    justify-content: center;
+}
+
 /* Nav Section */
 nav {
     display: grid;
@@ -62,9 +71,24 @@ nav {
     width: 50px;
 }
 
+/* Lightbox Modal Image Section */
+#main-img {
+    width: 400px;
+    border-radius: 10px;  
+}
+
+.lightbox-img {
+    width: 80px;
+    border-radius: 10px; 
+    margin-right: 23px;  /* TODO delete this line if I use CSS grid and replace with column gap */
+}
+
 /* Add to cart section */
 #cart-icon {
     filter: brightness(0) invert(1);  /* Change color of cart icon */
 }
 
 /* Media Queries */
+
+/* TODO Make it responsive for tablet devices */
+/* TODO Test it on multiple screen sizes using Responsively or another app */

@@ -2,6 +2,8 @@
 
 // Selecting elements
 
+// TODO Open modal/lightbox functionality
+
 // TODO Add to cart functionality
 const minusButton = document.getElementById("minus");
 const plusButton = document.getElementById("plus");

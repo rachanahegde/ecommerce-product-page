@@ -25,31 +25,42 @@
   </nav>
   <hr>
   <main>
-    <div class="image-modal">
-        <!-- TODO Set up the modal  -->
-    </div>
-
-    <div class="product-info">
-      <!-- Product information -->
-      <p class="company-name">Sneaker Company</p>
-      <h1> Fall Limited Edition Sneakers </h1>
-      <p> These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer. </p>
-
-      <!-- Pricing -->
-      <h2> $125.00 </h2>
-      <p class="discount"> 50% </p>
-      <p class="original-price"> $250.00</p>
-
-      <!-- Add item to cart functionality -->
-      <div class="add-product">
-        <!-- TODO Replace the buttons with the icons for plus and minus -->
-        <button id="minus">−</button>  
-        <input value="0" id="input"/>
-        <button id="plus">+</button>
-        <button> <img src="/images/icon-cart.svg" id="cart-icon"> Add to cart </button>
+    <div class="container">
+      <div class="modal-imgs">
+        <img src="/images/image-product-1.jpg" alt="" id="main-img">
+        <!-- Images used to open the lightbox -->
+        <div class="lightbox-images">
+          <img src="/images/image-product-1-thumbnail.jpg" onclick="openModal();currentSlide(1)" class="lightbox-img">
+          <img src="/images/image-product-2-thumbnail.jpg" onclick="openModal();currentSlide(1)" class="lightbox-img">
+          <img src="/images/image-product-3-thumbnail.jpg" onclick="openModal();currentSlide(1)" class="lightbox-img">
+          <img src="/images/image-product-4-thumbnail.jpg" onclick="openModal();currentSlide(1)" class="lightbox-img">
+        </div>
+        <!-- The Modal/Lightbox -->
+        <!-- TODO add the code for the modal/lightbox -->
       </div>
+      
+      <div class="product-info">
+        <!-- Product information -->
+        <p class="company-name">Sneaker Company</p>
+        <h1> Fall Limited Edition Sneakers </h1>
+        <p> These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer. </p>
+        
+        <!-- Pricing -->
+        <h2> $125.00 </h2>
+        <p class="discount"> 50% </p>
+        <p class="original-price"> $250.00</p>
+        
+        <!-- Add item to cart functionality -->
+        <div class="add-product">
+          <!-- TODO Replace the buttons with the icons for plus and minus -->
+          <button id="minus">−</button>  
+          <input value="0" id="input"/>
+          <button id="plus">+</button>
+          <button> <img src="/images/icon-cart.svg" id="cart-icon"> Add to cart </button>
+        </div>
+      </div>
+
     </div>
-    
   </main>
   <script src="script.js"></script>
 </body>
