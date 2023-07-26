@@ -26,19 +26,19 @@
   <hr>
   <main>
     <div class="container">
+      <!-- Modal Section -->
       <div class="modal-imgs">
         <img src="/images/image-product-1.jpg" alt="" id="main-img">
         <!-- Images used to open the lightbox -->
         <div class="lightbox-images">
           <img src="/images/image-product-1-thumbnail.jpg" onclick="openModal();currentSlide(1)" class="thumbnail-img">
-          <img src="/images/image-product-2-thumbnail.jpg" onclick="openModal();currentSlide(1)" class="thumbnail-img">
-          <img src="/images/image-product-3-thumbnail.jpg" onclick="openModal();currentSlide(1)" class="thumbnail-img">
-          <img src="/images/image-product-4-thumbnail.jpg" onclick="openModal();currentSlide(1)" class="thumbnail-img">
+          <img src="/images/image-product-2-thumbnail.jpg" onclick="openModal();currentSlide(2)" class="thumbnail-img">
+          <img src="/images/image-product-3-thumbnail.jpg" onclick="openModal();currentSlide(3)" class="thumbnail-img">
+          <img src="/images/image-product-4-thumbnail.jpg" onclick="openModal();currentSlide(4)" class="thumbnail-img">
         </div>
         <!-- The Modal/Lightbox -->
         <div id="myModal" class="modal">
-          <!-- TODO Convert the span class into the icon close image  -->
-          <span class="close cursor" onclick="closeModal()"></span>
+          <img src="/images/icon-close.svg" class="close cursor" onclick="closeModal()"></img>
           <div class="modal-content">
 
             <div class="mySlides">
@@ -58,26 +58,29 @@
             </div>
 
             <!-- Next/previous controls --> 
-            <!-- TODO Add the right and left arrow icons -->
-            <a class="prev" onclick="plusSlides(-1)"> </a>
-            <a class="next" onclick="plusSlides(1)"> </a>
+            <img src="/images/icon-previous.svg" class="prev" onclick="plusSlides(-1)"> </img>
+            <img src="/images/icon-next.svg" class="next" onclick="plusSlides(1)"> </img>
 
             <!-- Thumbnail image controls -->
-            <div class="column">
-              <img class="demo thumbnail-img" src="/images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)" alt="">
+            <div class="img-controls">
+              
+              <div class="column">
+                <img class="demo thumbnail-img" src="/images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)" alt="">
+              </div>
+              
+              <div class="column">
+                <img class="demo thumbnail-img" src="/images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)" alt="">
+              </div>
+              
+              <div class="column">
+                <img class="demo thumbnail-img" src="/images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)" alt="">
+              </div>
+              
+              <div class="column">
+                <img class="demo thumbnail-img" src="/images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)" alt="">
+              </div>
             </div>
 
-            <div class="column">
-              <img class="demo thumbnail-img" src="/images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)" alt="">
-            </div>
-
-            <div class="column">
-              <img class="demo thumbnail-img" src="/images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)" alt="">
-            </div>
-
-            <div class="column">
-              <img class="demo thumbnail-img" src="/images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)" alt="">
-            </div>
           </div>
       </div>
       
