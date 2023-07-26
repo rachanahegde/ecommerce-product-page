@@ -75,16 +75,42 @@ nav {
 /* Lightbox Modal Image Section */
 /* TODO Add an overlay for the background when the modal is clicked on and opened */
 
+/* Featured product image */
 #main-img {
     width: 400px;
     border-radius: 10px;  
 }
 
+/* Images used to open lightbox */
 .thumbnail-img {
     margin-top: 25px;
     width: 80px;
     border-radius: 10px; 
     margin-right: 23px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;  /* TODO I need this to be kind of transparent and NOT black */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
 }
 
 .mySlides img {
