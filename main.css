@@ -129,7 +129,7 @@ nav {
     position: relative;
     position: fixed;
     top: 10%;
-    left: 65%;
+    left: 66%;
     width: 20px;
     filter: brightness(0) invert(1);  /* Change color of close icon */
 }
@@ -149,20 +149,21 @@ nav {
 /* Next & previous buttons */
 .prev-btn, .next-btn {
     position: absolute;
-    top: 400px;
+    top: 370px;
     background-color: hsl(0, 0%, 100%);
     width: 50px;
     height: 50px;
     border-radius: 50%;
     display: grid;  /* Make buttons circular */
+    cursor: pointer;  /* TODO do I need this property */
 }
 
 .next-btn {
-    left: 970px;
+    left: 950px;
 }
 
 .prev-btn {
-    right: 970px;
+    right: 950px;
 }
 
 .prev, .next {
@@ -170,12 +171,15 @@ nav {
     align-self: center;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-/* .prev:hover,
+/* TODO On hover, change color of arrows to hsl(26, 100%, 55%) */
+.prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-} */
+    background-color: hsl(26, 100%, 55%);
+}
 
+.prev-btn:hover {
+    stroke: red;
+}
 /* .active,
 .demo:hover {
   opacity: 1;
