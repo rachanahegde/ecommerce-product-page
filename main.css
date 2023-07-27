@@ -34,6 +34,7 @@ hr {
     margin: 0 auto;  /* For centering the container */
     margin-top: 75px;
     width: 60%;  /* For centering the container */
+    /* TODO should the width be 100vw? */
     justify-content: center;  /* For centering the container */
 }
 
@@ -195,5 +196,6 @@ nav {
 
 /* Media Queries */
 
+/* TODO The desktop version (1440 px) isn't correct, I need to readjust the positioning of the elements! */
 /* TODO Make it responsive for tablet devices */
 /* TODO Test it on multiple screen sizes using Responsively or another app */
