@@ -124,22 +124,18 @@ nav {
 }
 
 /* The Close Button */
-/* TODO Use the fill property to change the color to orange when the button is active */
 .close {
     position: relative;
     position: fixed;
     top: 10%;
     left: 66%;
     width: 20px;
-    filter: brightness(0) invert(1);  /* Change color of close icon */
-}
-  
-/* .close:hover,
-.close:focus {
-    color: #999;
-    text-decoration: none;
     cursor: pointer;
-} */
+}
+
+.close:hover {
+    filter: brightness(0) saturate(100%) invert(48%) sepia(100%) saturate(714%) hue-rotate(346deg) brightness(100%) contrast(103%);
+}
 
 /* Hide the slides by default */
 .mySlides {
@@ -171,26 +167,22 @@ nav {
     align-self: center;
 }
 
-/* TODO On hover, change color of arrows to hsl(26, 100%, 55%) */
-.prev:hover,
-.next:hover {
-    background-color: hsl(26, 100%, 55%);
+/* On hover, change color of arrows to hsl(25, 100%, 94%) */
+.prev-btn:hover .prev {
+    filter: invert(100%) sepia(14%) saturate(4556%) hue-rotate(294deg) brightness(106%) contrast(106%);
 }
 
-.prev-btn:hover {
-    stroke: red;
+.next-btn:hover .next {
+    filter: invert(100%) sepia(14%) saturate(4556%) hue-rotate(294deg) brightness(106%) contrast(106%);
 }
+
+/* TODO  Make the thumnail image opaque and add outline when the user is clicking on it */
+/* TODO do the thumbnail opaque thing for the product gallery behind the modal as well! */
+/* TODO make the next image opaque when the mouse is hovering on it*/
+
 /* .active,
 .demo:hover {
   opacity: 1;
-} */
-
-/* img.hover-shadow {
-  transition: 0.3s;
-} */
-
-/* .hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 } */
 
 /* Add to cart section */
