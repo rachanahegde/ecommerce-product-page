@@ -176,13 +176,17 @@ nav {
     filter: invert(100%) sepia(14%) saturate(4556%) hue-rotate(294deg) brightness(106%) contrast(106%);
 }
 
-/* TODO  Make the thumnail image opaque and add outline when the user is clicking on it */
-/* TODO do the thumbnail opaque thing for the product gallery behind the modal as well! */
-/* TODO make the next image opaque when the mouse is hovering on it*/
 
-/* .active,
-.demo:hover {
-  opacity: 1;
+/* TODO Add image overlay for the active thumbnail image in the modal and in the gallery in the main page */
+/* TODO Add orange outline to the active thumnail img in gallery */
+/* TODO Make the next image opaque when the mouse is hovering on it*/
+/* TODO add more divs to achieve the image overlay effect - then recenter elements */
+
+.thumbnail-img.active {
+    outline: 2px solid hsl(26, 100%, 55%);
+}
+/* .thumbnail-img:hover {
+    
 } */
 
 /* Add to cart section */
@@ -192,6 +196,6 @@ nav {
 
 /* Media Queries */
 
-/* TODO The desktop version (1440 px) isn't correct, I need to readjust the positioning of the elements! */
+/* TODO Check desktop version (1440 px) */
 /* TODO Make it responsive for tablet devices */
-/* TODO Test it on multiple screen sizes using Responsively or another app */
+/* TODO Test on iphone using github pages */
