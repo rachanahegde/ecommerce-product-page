@@ -71,6 +71,10 @@ function showSlides(n) {
 }
 
 // TODO Add to cart functionality
+
+// - Add items to the cart
+// - View the cart and remove items from it
+
 // const minusButton = document.getElementById("minus");
 // const plusButton = document.getElementById("plus");
 // const inputField = document.getElementById("input");

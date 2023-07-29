@@ -68,6 +68,12 @@ nav {
     margin-top: 25px;
 }
 
+.nav-links {
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+}
+
 .nav-bar {
     text-decoration: none;
     justify-self: center;
@@ -76,10 +82,11 @@ nav {
     font-size: 16px;
 }
 
-.nav-links {
-    margin-left: 50px;
-    display: grid;
-    grid-template-columns: repeat(5, 80px);
+/* Underline link on hover */
+.nav-link:hover {
+    border-bottom: 4px solid hsl(26, 100%, 55%);
+    margin-bottom: -45px;
+    color: hsl(220, 13%, 13%);
 }
 
 .nav-icons {
@@ -92,6 +99,12 @@ nav {
 
 #profile {
     width: 50px;
+}
+
+#profile:hover {
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1.5px solid hsl(26, 100%, 55%);
 }
 
 /* LIGHTBOX IMAGE MODAL SECTION */
@@ -265,10 +278,8 @@ nav {
     font-weight: 700;
 }
 
-.pricing {
-    display: grid;
-    grid-template-columns: repeat(2, 118px);
-    align-items: center;
+.sneaker-descrip {
+    line-height: 25px;
 }
 
 .pricing-contrast {
@@ -276,6 +287,13 @@ nav {
     grid-template-rows: repeat(2, 50px);
     margin-bottom: 30px;
 }
+
+.pricing {
+    display: grid;
+    grid-template-columns: repeat(2, 118px);
+    align-items: center;
+}
+
 
 .discount-background {
     background-color: hsl(25, 100%, 94%);
@@ -301,17 +319,60 @@ nav {
 /* Add to cart */
 .add-product {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(2, auto);
+    column-gap: 20px;
+}
+
+.update-amount {
+    display: grid;
+    grid-template-columns: repeat(3, 20px);
+    column-gap: 30px;
+    background-color: hsl(223, 64%, 98%);
+    border-radius: 10px;
+    width: 145px;
+    height: 50px;
+    justify-content: center;
+    align-content: center;
+}
+
+#input {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 16px;
+    color: hsl(220, 13%, 13%);
+    font-weight: 700;
+    width: 10px;
+    justify-self: center;
+}
+
+#minus, #plus {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+/* Add to cart button */
+.update-cart {
+    background-color: hsl(26, 100%, 55%);
+    display: grid;  
+    grid-template-columns: repeat(2, auto);
+    column-gap: 12px;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 8px hsl(26, 96%, 89%);
 }
 
 #cart-icon {
     filter: brightness(0) invert(1);  /* Change color of cart icon */
+    width: 15px;
 }
 
-#input {
-    width: 30px;
+.cart-text {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 14px;
 }
-
 
 
 /* MEDIA QUERIES FOR TABLET */

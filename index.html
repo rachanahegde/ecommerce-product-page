@@ -12,11 +12,11 @@
     <!-- Logo -->
     <img src="./images/logo.svg" alt="" class="nav-bar" id="logo">
     <div class="nav-links">
-      <a href="" class="nav-bar"> Collections </a>
-      <a href="" class="nav-bar"> Men </a>
-      <a href="" class="nav-bar"> Women </a>
-      <a href="" class="nav-bar"> About </a>
-      <a href="" class="nav-bar"> Contact </a>
+      <a href="" class="nav-bar nav-link"> Collections </a>
+      <a href="" class="nav-bar nav-link"> Men </a>
+      <a href="" class="nav-bar nav-link"> Women </a>
+      <a href="" class="nav-bar nav-link"> About </a>
+      <a href="" class="nav-bar nav-link"> Contact </a>
     </div>
     <div class="nav-icons">
       <img src="./images/icon-cart.svg" alt="" class="nav-bar">
@@ -104,7 +104,7 @@
       <div class="product-info">
         <p class="company-name">Sneaker Company</p>
         <h1> Fall Limited Edition Sneakers </h1>
-        <p> These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer. </p>
+        <p class="sneaker-descrip"> These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer. </p>
         
         <!-- Pricing -->
         <div class="pricing-contrast">
@@ -119,11 +119,13 @@
         
         <!-- Add item to cart functionality -->
         <div class="add-product">
-          <!-- TODO Replace the buttons with the icons for plus and minus -->
-          <button id="minus"><img src="./images/icon-minus.svg"></button>  
-          <input value="0" id="input"/>
-          <button id="plus"><img src="./images/icon-plus.svg"></button>  
-          <button> <img src="./images/icon-cart.svg" id="cart-icon"> Add to cart </button>
+          <div class="update-amount">
+            <button id="minus"><img src="./images/icon-minus.svg"></button>  
+            <input value="0" id="input"/>
+            <button id="plus"><img src="./images/icon-plus.svg"></button>  
+          </div>
+
+          <button class="update-cart"> <img src="./images/icon-cart.svg" id="cart-icon">  <p class="cart-text"> Add to cart </p></button>
         </div>
 
       </div>
