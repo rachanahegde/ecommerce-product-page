@@ -5,8 +5,9 @@ const modal = document.getElementById("myModal");
 const slides = document.getElementsByClassName("mySlides");
 const dots = document.getElementsByClassName("demo");
 const columns = document.getElementsByClassName("column");
+const overlays = document.getElementsByClassName("overlay");
 
-// TODO --------------------------- Open modal/lightbox functionality
+// Modal/Lightbox functionality
 
 // Open the Modal
 function openModal() {
@@ -57,10 +58,16 @@ function showSlides(n) {
     columns[i].className = columns[i].className.replace(" active", "");
   }
 
-  // Display current slide and add active class to corresponding dot and column
+  // Loop through overlays and remove active class
+  for (i = 0; i < overlays.length; i++) {
+    overlays[i].className = overlays[i].className.replace(" active", "");
+  }
+
+  // Display current slide and add active class to corresponding dot, column, and overlay
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
   columns[slideIndex - 1].className += " active";
+  overlays[slideIndex - 1].className += " active";
 }
 
 // TODO Add to cart functionality

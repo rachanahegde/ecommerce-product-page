@@ -134,7 +134,8 @@ nav {
 }
 
 /* Image overlay for thumbnail image */
-.column {
+.column,
+.overlay {
     border-radius: 10px;
     width: 80px;
     display: flex;
@@ -146,12 +147,14 @@ nav {
     margin: auto;  /* center image within column div */
 }
 
-.column > img {
+.column > img,
+.overlay > img {
     vertical-align: middle;  /* aligns thumbnail img in center of container */
 }
 
 /* Create overlay effect */
-.column::before {
+.column::before,
+.overlay::before {
     content: '';  /* makes it visible */
     position: absolute;  /* Position pseudo-element relative to its container */
     left: 0;
@@ -165,7 +168,9 @@ nav {
 }
 
 .column:hover::before,
-.column.active::before {
+.column.active::before,
+.overlay:hover::before,
+.overlay.active::before {
     opacity: 0.50;  
 }
 
