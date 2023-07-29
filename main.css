@@ -38,6 +38,16 @@ hr {
     margin-top: 30px;
 }
 
+button {
+    /* Remove all default styles for button */
+    all: unset;
+}
+
+input {
+    /* Remove all default styles for input */
+    all: unset;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -289,9 +299,20 @@ nav {
 }
 
 /* Add to cart */
+.add-product {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+
 #cart-icon {
     filter: brightness(0) invert(1);  /* Change color of cart icon */
 }
+
+#input {
+    width: 30px;
+}
+
+
 
 /* MEDIA QUERIES FOR TABLET */
 /* MEDIA QUERIES FOR MOBILE */
