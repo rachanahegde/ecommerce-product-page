@@ -74,20 +74,29 @@ nav {
 }
 
 /* Lightbox Modal Image Section */
-/* TODO Add an overlay for the background when the modal is clicked on and opened */
 
 /* Featured product image */
+.modal-imgs {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 25px;
+}
+
 #main-img {
     width: 400px;
     border-radius: 10px;  
 }
 
 /* Images used to open lightbox */
+.lightbox-images {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    column-gap: 26px;
+}
+
 .thumbnail-img {
-    margin-top: 25px;
     width: 80px;
     border-radius: 10px; 
-    margin-right: 23px;
 }
 
 /* The Modal (background) */
@@ -123,12 +132,6 @@ nav {
     display: grid;
     grid-template-columns: repeat(4, 110px);
 }
-
-/* TODO Add image overlay for the active thumbnail image in the modal and in the gallery in the main page */
-/* TODO Add orange outline to the active thumnail img in gallery */
-/* TODO Make the next image opaque when the mouse is hovering on it*/
-/* TODO add more divs to achieve the image overlay effect - then recenter elements */
-
 
 /* Image overlay for thumbnail image */
 .column {
@@ -167,7 +170,8 @@ nav {
 }
 
 /* Outline current thumbnail image displayed */
-.thumbnail-img.active {
+.thumbnail-img.active,
+.column.active {
     outline: 2px solid hsl(26, 100%, 55%);
 }
 

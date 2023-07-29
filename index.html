@@ -31,10 +31,21 @@
         <img src="./images/image-product-1.jpg" alt="" id="main-img">
         <!-- Images used to open the lightbox -->
         <div class="lightbox-images">
-          <img src="./images/image-product-1-thumbnail.jpg" onclick="openModal();currentSlide(1)" class="thumbnail-img">
-          <img src="./images/image-product-2-thumbnail.jpg" onclick="openModal();currentSlide(2)" class="thumbnail-img">
-          <img src="./images/image-product-3-thumbnail.jpg" onclick="openModal();currentSlide(3)" class="thumbnail-img">
-          <img src="./images/image-product-4-thumbnail.jpg" onclick="openModal();currentSlide(4)" class="thumbnail-img">
+          <div class="column" onclick="openModal();currentSlide(1)">
+            <img src="./images/image-product-1-thumbnail.jpg" class="thumbnail-img">
+          </div>
+
+          <div class="column" onclick="openModal();currentSlide(2)">
+            <img src="./images/image-product-2-thumbnail.jpg" class="thumbnail-img">
+          </div>
+
+          <div class="column" onclick="openModal();currentSlide(3)">
+            <img src="./images/image-product-3-thumbnail.jpg" class="thumbnail-img">
+          </div>
+
+          <div class="column" onclick="openModal();currentSlide(4)" >
+            <img src="./images/image-product-4-thumbnail.jpg" class="thumbnail-img">
+          </div>
         </div>
         <!-- The Modal/Lightbox -->
         <div id="myModal" class="modal">
