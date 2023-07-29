@@ -7,11 +7,22 @@
 p {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 16px;
-    /* font-size, color, letter-spacing, text-transform, margin-bottom */
+    font-weight: 400;
+    color: hsl(219, 9%, 45%);
 }
 
 h1 {
-     /* font-family, font-style, font-size, color  */
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: hsl(220, 13%, 13%);
+}
+
+h2 {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: hsl(220, 13%, 13%);
 }
 
 body {
@@ -38,7 +49,7 @@ hr {
     justify-content: center;  /* For centering the container */
 }
 
-/* Nav Section */
+/* NAV SECTION */
 nav {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -73,7 +84,7 @@ nav {
     width: 50px;
 }
 
-/* Lightbox Modal Image Section */
+/* LIGHTBOX IMAGE MODAL SECTION */
 
 /* Featured product image */
 .modal-imgs {
@@ -138,6 +149,7 @@ nav {
 .overlay {
     border-radius: 10px;
     width: 80px;
+    height: 80px;
     display: flex;
     position: relative;  /* Allows absolute positioning of ::before pseudo-element */
     display: inline-block;
@@ -233,12 +245,56 @@ nav {
     filter: invert(100%) sepia(14%) saturate(4556%) hue-rotate(294deg) brightness(106%) contrast(106%);
 }
 
-/* Add to cart section */
+/* PRODUCT INFORMATION SECTION */
+/* Product Description */
+.company-name {
+    color: hsl(26, 100%, 55%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.pricing {
+    display: grid;
+    grid-template-columns: repeat(2, 118px);
+    align-items: center;
+}
+
+.pricing-contrast {
+    display: grid;
+    grid-template-rows: repeat(2, 50px);
+    margin-bottom: 30px;
+}
+
+.discount-background {
+    background-color: hsl(25, 100%, 94%);
+    width: 50px;
+    height: 25px;
+    border-radius: 4px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.discount {
+    color: hsl(26, 100%, 55%);
+    font-weight: 700;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: hsl(220, 14%, 75%);
+    font-weight: 700;
+}
+
+/* Add to cart */
 #cart-icon {
     filter: brightness(0) invert(1);  /* Change color of cart icon */
 }
 
-/* Media Queries */
+/* MEDIA QUERIES FOR TABLET */
+/* MEDIA QUERIES FOR MOBILE */
 
 /* TODO Check desktop version (1440 px) */
 /* TODO Make it responsive for tablet devices */

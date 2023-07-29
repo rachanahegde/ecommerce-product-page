@@ -26,6 +26,7 @@
   <hr>
   <main>
     <div class="container">
+
       <!-- Modal Section -->
       <div class="modal-imgs">
         <img src="./images/image-product-1.jpg" alt="" id="main-img">
@@ -47,68 +48,74 @@
             <img src="./images/image-product-4-thumbnail.jpg" class="thumbnail-img">
           </div>
         </div>
-        <!-- The Modal/Lightbox -->
-        <div id="myModal" class="modal">
-          <img src="./images/icon-close.svg" class="close cursor" onclick="closeModal()"></img>
-          <div class="modal-content">
+      </div>
 
-            <div class="mySlides">
-              <img src="./images/image-product-1.jpg">
-            </div>
-        
-            <div class="mySlides">
-              <img src="./images/image-product-2.jpg">
-            </div>
-        
-            <div class="mySlides">
-              <img src="./images/image-product-3.jpg">
-            </div>
-        
-            <div class="mySlides">
-              <img src="./images/image-product-4.jpg">
-            </div>
+      <!-- The Modal/Lightbox -->
+      <div id="myModal" class="modal">
+        <img src="./images/icon-close.svg" class="close cursor" onclick="closeModal()"></img>
+        <div class="modal-content">
+          <div class="mySlides">
+            <img src="./images/image-product-1.jpg">
+          </div>
+      
+          <div class="mySlides">
+            <img src="./images/image-product-2.jpg">
+          </div>
+      
+          <div class="mySlides">
+            <img src="./images/image-product-3.jpg">
+          </div>
+      
+          <div class="mySlides">
+            <img src="./images/image-product-4.jpg">
+          </div>
 
-            <!-- Next/previous controls --> 
-            <div class="prev-btn">
-              <img src="./images/icon-previous.svg" class="prev" onclick="plusSlides(-1)"> </img>
-            </div>
-            <div class="next-btn">
-              <img src="./images/icon-next.svg" class="next" onclick="plusSlides(1)"> </img>
-            </div>
+          <!-- Next/previous controls --> 
+          <div class="prev-btn">
+            <img src="./images/icon-previous.svg" class="prev" onclick="plusSlides(-1)"> </img>
+          </div>
+          <div class="next-btn">
+            <img src="./images/icon-next.svg" class="next" onclick="plusSlides(1)"> </img>
+          </div>
 
-            <!-- Thumbnail image controls -->
-            <div class="img-controls">
-              
-              <div class="overlay" onclick="currentSlide(1)">
-                <img class="demo thumbnail-img" src="./images/image-product-1-thumbnail.jpg" alt="">
-              </div>
-              
-              <div class="overlay" onclick="currentSlide(2)">
-                <img class="demo thumbnail-img" src="./images/image-product-2-thumbnail.jpg" alt="">
-              </div>
-              
-              <div class="overlay" onclick="currentSlide(3)">
-                <img class="demo thumbnail-img" src="./images/image-product-3-thumbnail.jpg" alt="">
-              </div>
-              
-              <div class="overlay" onclick="currentSlide(4)">
-                <img class="demo thumbnail-img" src="./images/image-product-4-thumbnail.jpg" alt="">
-              </div>
+          <!-- Thumbnail image controls -->
+          <div class="img-controls">
+            <div class="overlay" onclick="currentSlide(1)">
+              <img class="demo thumbnail-img" src="./images/image-product-1-thumbnail.jpg" alt="">
+            </div>
+            
+            <div class="overlay" onclick="currentSlide(2)">
+              <img class="demo thumbnail-img" src="./images/image-product-2-thumbnail.jpg" alt="">
+            </div>
+            
+            <div class="overlay" onclick="currentSlide(3)">
+              <img class="demo thumbnail-img" src="./images/image-product-3-thumbnail.jpg" alt="">
+            </div>
+            
+            <div class="overlay" onclick="currentSlide(4)">
+              <img class="demo thumbnail-img" src="./images/image-product-4-thumbnail.jpg" alt="">
             </div>
 
           </div>
+        </div>
       </div>
       
+      <!-- Product information section -->
       <div class="product-info">
-        <!-- Product information -->
         <p class="company-name">Sneaker Company</p>
         <h1> Fall Limited Edition Sneakers </h1>
         <p> These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer. </p>
         
         <!-- Pricing -->
-        <h2> $125.00 </h2>
-        <p class="discount"> 50% </p>
-        <p class="original-price"> $250.00</p>
+        <div class="pricing-contrast">
+          <div class="pricing">
+            <h2> $125.00 </h2>
+            <div class="discount-background">
+              <p class="discount"> 50% </p>
+            </div>
+          </div>
+          <p class="original-price"> $250.00</p>
+        </div>
         
         <!-- Add item to cart functionality -->
         <div class="add-product">
@@ -118,6 +125,7 @@
           <button id="plus">+</button>
           <button> <img src="./images/icon-cart.svg" id="cart-icon"> Add to cart </button>
         </div>
+
       </div>
 
     </div>
