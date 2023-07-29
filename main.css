@@ -161,7 +161,8 @@ nav {
     transition: .5s ease;
 }
 
-.column:hover::before {
+.column:hover::before,
+.column.active::before {
     opacity: 0.50;  
 }
 

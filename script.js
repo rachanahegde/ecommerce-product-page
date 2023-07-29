@@ -4,6 +4,7 @@
 const modal = document.getElementById("myModal");
 const slides = document.getElementsByClassName("mySlides");
 const dots = document.getElementsByClassName("demo");
+const columns = document.getElementsByClassName("column");
 
 // TODO --------------------------- Open modal/lightbox functionality
 
@@ -51,9 +52,15 @@ function showSlides(n) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
 
-  // Display current slide and add active class to corresponding dot
+  // Loop through columns and remove active class
+  for (i = 0; i < columns.length; i++) {
+    columns[i].className = columns[i].className.replace(" active", "");
+  }
+
+  // Display current slide and add active class to corresponding dot and column
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
+  columns[slideIndex - 1].className += " active";
 }
 
 // TODO Add to cart functionality
