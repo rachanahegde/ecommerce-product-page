@@ -100,6 +100,11 @@ nav {
     align-items: center;
 }
 
+#nav-cart-icon:hover{
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(9%) sepia(6%) saturate(1687%) hue-rotate(178deg) brightness(99%) contrast(91%);
+}
+
 #profile {
     width: 50px;
 }
@@ -440,8 +445,9 @@ nav {
     color: hsl(220, 13%, 13%);
 }
 
-#trash-icon {
+#trash-icon:hover {
     cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(9%) sepia(6%) saturate(1687%) hue-rotate(178deg) brightness(99%) contrast(91%);
 }
 
 /* Checkout button */
