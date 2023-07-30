@@ -100,10 +100,15 @@ updateCartBtn.addEventListener("click", (event) => {
   // TODO If they click this button again, then add more items / update the value...
 });
 
-// TODO View the cart and remove items from it
+// TODO View the cart
 
+// TODO Remove items from cart
 // If user clicks trash icon then the cart is empty
-// Display "Your cart is empty" text instead of items
+// Delete cart item
+// Hide the checkout button
+// Display "Your cart is empty" text
+
+// TODO ADD NUMBER TO SHOPPING CART ICON INDICATING NUMBER OF ITEMS IN CART
 
 // ---------------------------------------------------------------------------
 

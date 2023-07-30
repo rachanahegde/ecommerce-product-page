@@ -23,10 +23,35 @@
       <img src="./images/image-avatar.png" alt="" class="nav-bar" id="profile">
     </div>
   </nav>
-  <hr>
+  <hr class="main-hr">
   <main>
-    <div class="container">
+    <!-- TODO SET UP CART CONTAINER -->
+    <div class="cart-container">
+      <p class="shopping-cart-text"> Cart </p>
+      <hr class="cart-hr">
+      
+      <!-- TODO make this dynamic - can loop through and add item elements using JS-->
+      <div class="cart-item">
+        <img src="./images/image-product-1-thumbnail.jpg" class="cart-item-img">
+        <div class="item-info">
+          <div class="item-text">
+            <p> Fall Limited Edition Sneakers </p>
+          </div>
+          <div class="item-cost">
+            <p> $125.00 x 3 <span class="total-item-cost"> $375.00 </span></p>
+          </div>
+        </div>
+        <div class="trash-item">
+          <img src="./images/icon-delete.svg" id="trash-icon">
+        </div>
+      </div>
 
+      <button id="checkout-btn"> 
+        <p class="checkout-text"> Checkout </p>
+      </button>
+    </div>
+
+    <div class="container">
       <!-- Modal Section -->
       <div class="modal-imgs">
         <img src="./images/image-product-1.jpg" alt="" id="main-img">
