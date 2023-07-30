@@ -1,13 +1,17 @@
 "use strict";
 
-// Selecting elements
+// SELECTING ELEMENTS
 const modal = document.getElementById("myModal");
 const slides = document.getElementsByClassName("mySlides");
 const dots = document.getElementsByClassName("demo");
 const columns = document.getElementsByClassName("column");
 const overlays = document.getElementsByClassName("overlay");
+const minusButton = document.getElementById("minus");
+const plusButton = document.getElementById("plus");
+const inputField = document.getElementById("input");
+const updateCartBtn = document.getElementById("update-cart");
 
-// Modal/Lightbox functionality
+// MODAL/LIGHTBOX FUNCTIONALITY
 
 // Open the Modal
 function openModal() {
@@ -70,26 +74,38 @@ function showSlides(n) {
   overlays[slideIndex - 1].className += " active";
 }
 
-// TODO Add to cart functionality
+// TODO ADD TO CART FUNCTIONALITY -------------------------------------------------
 
-// - Add items to the cart
-// - View the cart and remove items from it
+// Increase/decrease input value when minus/plus button is pressed
+minusButton.addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent default behavior of button
+  const currentValue = Number(inputField.value) || 0;
+  // Restrict negative input
+  if (currentValue > 0) {
+    inputField.value = currentValue - 1; // Decrease value in input field by 1
+  }
+});
 
-// const minusButton = document.getElementById("minus");
-// const plusButton = document.getElementById("plus");
-// const inputField = document.getElementById("input");
+plusButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  const currentValue = Number(inputField.value) || 0;
+  inputField.value = currentValue + 1; // Increase value in input field by 1
+});
 
-// minusButton.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   const currentValue = Number(inputField.value) || 0;
-//   inputField.value = currentValue - 1;
-// });
+// TODO Add items to the cart
 
-// plusButton.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   const currentValue = Number(inputField.value) || 0;
-//   inputField.value = currentValue + 1;
-// });
+updateCartBtn.addEventListener("click", (event) => {
+  console.log(inputField.value);
+  // TODO Add a certain number of items plus price calculated to the cart
+  // TODO If they click this button again, then add more items / update the value...
+});
+
+// TODO View the cart and remove items from it
+
+// If user clicks trash icon then the cart is empty
+// Display "Your cart is empty" text instead of items
+
+// ---------------------------------------------------------------------------
 
 /*
 TODO Remaining Functionality

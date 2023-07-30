@@ -316,7 +316,7 @@ nav {
     font-weight: 700;
 }
 
-/* Add to cart */
+/* ADD TO CART SECTION */
 .add-product {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -348,10 +348,12 @@ nav {
     display: flex;
     align-self: center;
     justify-self: center;
+    cursor: pointer;
 }
 
 /* Add to cart button */
-.update-cart {
+#update-cart {
+    cursor: pointer;
     background-color: hsl(26, 100%, 55%);
     display: grid;  
     grid-template-columns: repeat(2, auto);
@@ -381,3 +383,4 @@ nav {
 /* TODO Check desktop version (1440 px) */
 /* TODO Make it responsive for tablet devices */
 /* TODO Test on iphone using github pages */
+/* TODO Check that active states have all been set up - compare to the design files */
