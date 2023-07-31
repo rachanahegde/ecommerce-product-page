@@ -15,6 +15,9 @@ const cart = document.getElementById("nav-cart-icon");
 const cartContainer = document.getElementById("cart-container");
 const checkoutBtn = document.getElementById("checkout-btn");
 
+// TODO do i need line below
+// const item = document.querySelector(".cart-item");
+
 // MODAL/LIGHTBOX FUNCTIONALITY
 
 // Open the Modal
@@ -112,6 +115,21 @@ plusButton.addEventListener("click", (event) => {
 //   </div>
 // </div>
 
+function emptyCart() {
+  // If the cart is now empty, display empty cart text and hide the checkout button
+  const emptyTextDiv = document.createElement("div");
+  emptyTextDiv.setAttribute("id", "empty-cart-text");
+  emptyTextDiv.innerHTML = '<p id="empty-text">Your cart is empty.</p>';
+  cartItemsEl.appendChild(emptyTextDiv);
+
+  // Hide the checkout button
+  checkoutBtn.style.display = "none";
+}
+
+if (!cartItemsEl.hasChildNodes()) {
+  emptyCart();
+}
+
 // Add items to the cart
 updateCartBtn.addEventListener("click", (event) => {
   if (inputField.value > 0) {
@@ -174,6 +192,17 @@ updateCartBtn.addEventListener("click", (event) => {
 
     // Append cart-item to the parent container
     cartItemsEl.appendChild(cartItem);
+
+    // TODO Remove items from cart
+    let trash = document.querySelector("#trash-icon");
+    trash.addEventListener("click", (event) => {
+      const trashedItem = trashIcon.parentNode.parentNode; // Get the parent of the parent of the trash icon, which is the cart item
+      cartItemsEl.removeChild(trashedItem); // Remove the cart item from the cart
+
+      if (!cartItemsEl.hasChildNodes()) {
+        emptyCart();
+      }
+    });
   }
 });
 
@@ -186,24 +215,9 @@ cart.addEventListener("click", (event) => {
   }
 });
 
-// Display "Your cart is empty" text
-// Render this HTML: <div id="empty-cart-text"><p id="empty-text">Your cart is empty.</p></div>
-if (!cartItemsEl.hasChildNodes()) {
-  // Display text
-  const emptyTextDiv = document.createElement("div");
-  emptyTextDiv.setAttribute("id", "empty-cart-text");
-  emptyTextDiv.innerHTML = '<p id="empty-text">Your cart is empty.</p>';
-  cartItemsEl.appendChild(emptyTextDiv);
-
-  // Hide the checkout button
-  checkoutBtn.style.display = "none";
-}
-
-// TODO Remove items from cart
-// If user clicks trash icon then the cart is empty
-// Delete cart item
-
 // TODO ADD NUMBER TO SHOPPING CART ICON INDICATING NUMBER OF ITEMS IN CART
+//--- This number should update depending on quantity variable
+//--- Number should disappear when cart is empty
 
 // ---------------------------------------------------------------------------
 
