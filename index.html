@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="main.css">
-  <title> E-commerce Product Page</title>
+  <title>E-commerce Product Page</title>
 </head>
 <body>
   <!-- Navigation bar -->
@@ -12,11 +12,11 @@
     <!-- Logo -->
     <img src="./images/logo.svg" alt="" class="nav-bar" id="logo">
     <div class="nav-links">
-      <a href="" class="nav-bar nav-link"> Collections </a>
-      <a href="" class="nav-bar nav-link"> Men </a>
-      <a href="" class="nav-bar nav-link"> Women </a>
-      <a href="" class="nav-bar nav-link"> About </a>
-      <a href="" class="nav-bar nav-link"> Contact </a>
+      <a href="" class="nav-bar nav-link">Collections</a>
+      <a href="" class="nav-bar nav-link">Men</a>
+      <a href="" class="nav-bar nav-link">Women</a>
+      <a href="" class="nav-bar nav-link">About</a>
+      <a href="" class="nav-bar nav-link">Contact</a>
     </div>
     <div class="nav-icons">
       <img src="./images/icon-cart.svg" alt="" class="nav-bar" id="nav-cart-icon">
@@ -27,27 +27,11 @@
   <main>
     <!-- TODO SET UP CART CONTAINER -->
     <div class="cart-container">
-      <p class="shopping-cart-text"> Cart </p>
+      <p class="shopping-cart-text">Cart</p>
       <hr class="cart-hr">
-      
-      <!-- TODO make this dynamic - can loop through and add item elements using JS-->
-      <div class="cart-item">
-        <img src="./images/image-product-1-thumbnail.jpg" class="cart-item-img">
-        <div class="item-info">
-          <div class="item-text">
-            <p> Fall Limited Edition Sneakers </p>
-          </div>
-          <div class="item-cost">
-            <p> $125.00 x 3 <span class="total-item-cost"> $375.00 </span></p>
-          </div>
-        </div>
-        <div class="trash-item">
-          <img src="./images/icon-delete.svg" id="trash-icon">
-        </div>
-      </div>
-
+      <div id="cart-items"></div>
       <button id="checkout-btn"> 
-        <p class="checkout-text"> Checkout </p>
+        <p class="checkout-text">Checkout</p>
       </button>
     </div>
 
@@ -58,7 +42,7 @@
         <!-- Images used to open the lightbox -->
         <div class="lightbox-images">
           <div class="column" onclick="openModal();currentSlide(1)">
-            <img src="./images/image-product-1-thumbnail.jpg" class="thumbnail-img">
+            <img src="./images/image-product-1-thumbnail.jpg" class="thumbnail-img" id="main-thumbnail">
           </div>
 
           <div class="column" onclick="openModal();currentSlide(2)">
@@ -128,18 +112,18 @@
       <!-- Product information section -->
       <div class="product-info">
         <p class="company-name">Sneaker Company</p>
-        <h1> Fall Limited Edition Sneakers </h1>
-        <p class="sneaker-descrip"> These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer. </p>
+        <h1 id="product-name">Fall Limited Edition Sneakers</h1>
+        <p class="sneaker-descrip">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
         
         <!-- Pricing -->
         <div class="pricing-contrast">
           <div class="pricing">
-            <h2> $125.00 </h2>
+            <h2 id="current-price">$125.00</h2>
             <div class="discount-background">
-              <p class="discount"> 50% </p>
+              <p class="discount">50%</p>
             </div>
           </div>
-          <p class="original-price"> $250.00</p>
+          <p class="original-price">$250.00</p>
         </div>
         
         <!-- Add item to cart functionality -->
@@ -150,7 +134,7 @@
             <button id="plus"><img src="./images/icon-plus.svg"></button>  
           </div>
 
-          <button id="update-cart"> <img src="./images/icon-cart.svg" id="cart-icon">  <p class="cart-text"> Add to cart </p></button>
+          <button id="update-cart"> <img src="./images/icon-cart.svg" id="cart-icon"><p class="cart-text">Add to cart</p></button>
         </div>
 
       </div>

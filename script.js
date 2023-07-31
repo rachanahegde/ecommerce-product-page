@@ -10,6 +10,7 @@ const minusButton = document.getElementById("minus");
 const plusButton = document.getElementById("plus");
 const inputField = document.getElementById("input");
 const updateCartBtn = document.getElementById("update-cart");
+const cartItemsEl = document.getElementById("cart-items");
 
 // MODAL/LIGHTBOX FUNCTIONALITY
 
@@ -74,7 +75,7 @@ function showSlides(n) {
   overlays[slideIndex - 1].className += " active";
 }
 
-// TODO ADD TO CART FUNCTIONALITY -------------------------------------------------
+// ADD TO CART FUNCTIONALITY
 
 // Increase/decrease input value when minus/plus button is pressed
 minusButton.addEventListener("click", (event) => {
@@ -92,15 +93,89 @@ plusButton.addEventListener("click", (event) => {
   inputField.value = currentValue + 1; // Increase value in input field by 1
 });
 
-// TODO Add items to the cart
+// Example HTML structure for each cart item - generated with JS below
+// <div class="cart-item">
+//   <img src="./images/image-product-1-thumbnail.jpg" class="cart-item-img">
+//   <div class="item-info">
+//     <div class="item-text">
+//       <p>Fall Limited Edition Sneakers</p>
+//     </div>
+//     <div class="item-cost">
+//       <p>$125.00 x 3<span class="total-item-cost">$375.00</span></p>
+//     </div>
+//   </div>
+//   <div class="trash-item">
+//     <img src="./images/icon-delete.svg" id="trash-icon">
+//   </div>
+// </div>
 
+// Add items to the cart
 updateCartBtn.addEventListener("click", (event) => {
-  console.log(inputField.value);
-  // TODO Add a certain number of items plus price calculated to the cart
-  // TODO If they click this button again, then add more items / update the value...
+  if (inputField.value > 0) {
+    // Remove existing product from cart and update it with new quantities of product
+    if (cartItemsEl.hasChildNodes()) {
+      cartItemsEl.removeChild(cartItemsEl.firstChild);
+    }
+
+    // Get product name, price, quantity, and calculate total
+    const quantity = inputField.value;
+    const productName = document.getElementById("product-name").textContent;
+    const price = document.getElementById("current-price").textContent;
+    const formattedPrice = Number(price.replace("$", ""));
+    const totalPrice = `$${formattedPrice * quantity}.00`;
+
+    // Create new cart item
+    const cartItem = document.createElement("div");
+    // Add class name 'cart-item'
+    cartItem.setAttribute("class", "cart-item");
+
+    // Create thumbnail image element and set its source
+    const itemImg = document.createElement("img");
+    itemImg.src = document.getElementById("main-thumbnail").src;
+    itemImg.classList.add("cart-item-img");
+
+    // Create the item-info container
+    const itemInfo = document.createElement("div");
+    itemInfo.classList.add("item-info");
+
+    // Create the item-text container
+    const itemText = document.createElement("div");
+    itemText.classList.add("item-text");
+    const itemName = document.createElement("p");
+    itemName.textContent = productName;
+    itemText.appendChild(itemName);
+
+    // Create the item-cost container
+    const itemCost = document.createElement("div");
+    itemCost.classList.add("item-cost");
+    const itemCostText = document.createElement("p");
+    itemCostText.innerHTML = `${price} x ${quantity}<span class='total-item-cost'>${totalPrice}</span>`;
+    itemCost.appendChild(itemCostText);
+
+    // Append item-text and item-cost containers to the item-info container
+    itemInfo.appendChild(itemText);
+    itemInfo.appendChild(itemCost);
+
+    // Create the trash-item container and trash icon
+    const trashItem = document.createElement("div");
+    trashItem.classList.add("trash-item");
+    const trashIcon = document.createElement("img");
+    trashIcon.src = "./images/icon-delete.svg";
+    trashIcon.id = "trash-icon";
+    trashItem.appendChild(trashIcon);
+
+    // Append the child elements to the cart item container
+    cartItem.appendChild(itemImg);
+    cartItem.appendChild(itemInfo);
+    cartItem.appendChild(trashItem);
+
+    // Append cart-item to the parent container
+    cartItemsEl.appendChild(cartItem);
+  }
 });
 
 // TODO View the cart
+// Make sure that cart is set to display:none in CSS first
 
 // TODO Remove items from cart
 // If user clicks trash icon then the cart is empty
