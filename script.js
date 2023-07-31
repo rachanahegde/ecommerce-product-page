@@ -11,6 +11,9 @@ const plusButton = document.getElementById("plus");
 const inputField = document.getElementById("input");
 const updateCartBtn = document.getElementById("update-cart");
 const cartItemsEl = document.getElementById("cart-items");
+const cart = document.getElementById("nav-cart-icon");
+const cartContainer = document.getElementById("cart-container");
+const checkoutBtn = document.getElementById("checkout-btn");
 
 // MODAL/LIGHTBOX FUNCTIONALITY
 
@@ -174,14 +177,31 @@ updateCartBtn.addEventListener("click", (event) => {
   }
 });
 
-// TODO View the cart
-// Make sure that cart is set to display:none in CSS first
+// View and hide the cart when user clicks on cart icon
+cart.addEventListener("click", (event) => {
+  if (cartContainer.style.display === "") {
+    cartContainer.style.display = "grid";
+  } else {
+    cartContainer.style.display = "";
+  }
+});
+
+// Display "Your cart is empty" text
+// Render this HTML: <div id="empty-cart-text"><p id="empty-text">Your cart is empty.</p></div>
+if (!cartItemsEl.hasChildNodes()) {
+  // Display text
+  const emptyTextDiv = document.createElement("div");
+  emptyTextDiv.setAttribute("id", "empty-cart-text");
+  emptyTextDiv.innerHTML = '<p id="empty-text">Your cart is empty.</p>';
+  cartItemsEl.appendChild(emptyTextDiv);
+
+  // Hide the checkout button
+  checkoutBtn.style.display = "none";
+}
 
 // TODO Remove items from cart
 // If user clicks trash icon then the cart is empty
 // Delete cart item
-// Hide the checkout button
-// Display "Your cart is empty" text
 
 // TODO ADD NUMBER TO SHOPPING CART ICON INDICATING NUMBER OF ITEMS IN CART
 
