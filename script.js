@@ -15,9 +15,6 @@ const cart = document.getElementById("nav-cart-icon");
 const cartContainer = document.getElementById("cart-container");
 const checkoutBtn = document.getElementById("checkout-btn");
 
-// TODO do i need line below
-// const item = document.querySelector(".cart-item");
-
 // MODAL/LIGHTBOX FUNCTIONALITY
 
 // Open the Modal
@@ -98,22 +95,6 @@ plusButton.addEventListener("click", (event) => {
   const currentValue = Number(inputField.value) || 0;
   inputField.value = currentValue + 1; // Increase value in input field by 1
 });
-
-// Example HTML structure for each cart item - generated with JS below
-// <div class="cart-item">
-//   <img src="./images/image-product-1-thumbnail.jpg" class="cart-item-img">
-//   <div class="item-info">
-//     <div class="item-text">
-//       <p>Fall Limited Edition Sneakers</p>
-//     </div>
-//     <div class="item-cost">
-//       <p>$125.00 x 3<span class="total-item-cost">$375.00</span></p>
-//     </div>
-//   </div>
-//   <div class="trash-item">
-//     <img src="./images/icon-delete.svg" id="trash-icon">
-//   </div>
-// </div>
 
 function emptyCart() {
   // If the cart is now empty, display empty cart text and hide the checkout button
