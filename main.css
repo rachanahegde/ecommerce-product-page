@@ -52,6 +52,8 @@ input {
 }
 
 .container {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(2, auto);
     column-gap: 100px;
@@ -421,10 +423,10 @@ nav {
 /* CART CONTAINER */
 #cart-container {
     display: none;
+    width: 350px;
     position: absolute;
     top: 90px;
     left: 960px;
-    width: 350px;
     background-color: #ffffff;
     box-shadow: 0px 25px 40px #00000033;
     border-radius: 10px;
@@ -519,25 +521,153 @@ nav {
 }
 
 /* MEDIA QUERIES FOR TABLET */
-@media all and (max-width: 1300px) {
-    body {
-        background-color: red;
+@media all and (max-width: 1320px) {
+    /* CART CONTAINER */
+    #cart-container {
+        width: 270px;
+        top: 90px;
+        left: 960px;
+    }
+
+    .cart-hr {
+        width: 270px;
+    }
+
+    .cart-item-img {
+        width: 35px;
+    }
+
+    .item-text p {
+        font-size: 13px;
+    }
+
+    .item-cost p {
+        font-size: 13px;
+    }
+    
+    #trash-icon {
+        width: 13px;
+    }
+
+    /* MODAL BTNS */
+    .next-btn {
+        left: 880px;
+    }
+
+    .prev-btn {
+        right: 880px;
     }
 }
 
-/* TODO 
-SET THE <MAIN> ELEMENT TO DISPLAY WITH CSS GRID 
-THEN MAKE SURE THERE IS ONLY ONE ROW AND ONE COLUMN
-THEN SET THE .CART-CONTAINER TO BE POSITIONED RELATIVELY
-AND MAKE SURE THAT IT IS ALSO WITHIN THE SAME ROW/COLUMN
-*/
+@media all and (max-width: 1240px) {
+    /* CART CONTAINER */
+    #cart-container {
+        width: 220px;
+        top: 90px;
+        left: 940px;
+    }
 
+    #empty-cart-text {
+        margin-top: 17px;
+        margin-bottom: 25px;
+    }
+
+    #empty-text {
+        font-size: 13px;
+    }
+
+    .shopping-cart-text {
+        font-size: 13px;
+    }
+
+    .cart-hr {
+        width: 220px;
+    }
+
+    .cart-item {
+        column-gap: 8px;
+    }
+
+    .cart-item-img {
+        width: 30px;
+    }
+
+    .item-text p {
+        font-size: 12px;
+    }
+
+    .item-cost p {
+        font-size: 10px;
+    }
+    
+    #trash-icon {
+        width: 12px;
+    }
+
+    /* MODAL BTNS */
+    .next-btn {
+        left: 830px;
+    }
+
+    .prev-btn {
+        right: 830px;
+    }
+}
+
+@media all and (max-width: 1170px) {
+    /* CART CONTAINER */
+    #cart-container {
+        left: 850px;
+    }
+}
+
+@media all and (max-width: 1080px) {
+    /* NAVIGATION BAR */
+    nav {
+        grid-template-columns: repeat(3, 250px);
+    }
+
+    .nav-links {
+        margin-left: 0px;
+        grid-template-columns: repeat(5, 60px);
+    }
+
+    .nav-icons {
+        margin-left: 110px;
+        column-gap: 15px;
+    }
+
+    /* CART CONTAINER */
+    #cart-container {
+        left: 700px;
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+        column-gap: 40px;
+    }
+
+    /* MODAL BTNS */
+    .close {
+        top: 4%;
+        left: 74%;
+    }
+
+    .next-btn {
+        left: 750px;
+    }
+    
+    .prev-btn {
+        right: 750px;
+    }
+}
 
 /* MEDIA QUERIES FOR MOBILE */
+@media all and (max-width: 375px) {
+    
+} 
 
 
-/* TODO Check desktop version (1440 px) */
-/* TODO Make it responsive for tablet devices */
 /* TODO Test on iphone using github pages */
 /* TODO Check that active states have all been set up - compare to the design files */
 
@@ -545,5 +675,4 @@ AND MAKE SURE THAT IT IS ALSO WITHIN THE SAME ROW/COLUMN
 TODO Your users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
-
 */
