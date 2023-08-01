@@ -127,6 +127,7 @@ nav {
 #main-img {
     width: 400px;
     border-radius: 10px;  
+    cursor: pointer;
 }
 
 /* Images used to open lightbox */
@@ -139,6 +140,7 @@ nav {
 .thumbnail-img {
     width: 80px;
     border-radius: 10px; 
+    margin: auto;  /* center image within column div */
 }
 
 /* The Modal (background) */
@@ -184,10 +186,7 @@ nav {
     display: flex;
     position: relative;  /* Allows absolute positioning of ::before pseudo-element */
     display: inline-block;
-}
-
-.thumbnail-img {
-    margin: auto;  /* center image within column div */
+    cursor: pointer;
 }
 
 .column > img,
