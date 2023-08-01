@@ -348,7 +348,7 @@ nav {
     font-size: 16px;
     color: hsl(220, 13%, 13%);
     font-weight: 700;
-    width: 10px;
+    width: 20px;
     justify-self: center;
 }
 
@@ -393,9 +393,28 @@ nav {
 }
 
 /* CART CONTAINER */
+/* Quantity */
+#quantity {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    z-index: 1;
+    position: absolute;
+    right: 272px;
+    top: 32px;
+    background-color: hsl(26, 100%, 55%);
+    width: 23px;
+    height: 15px;
+    border-radius: 45%;
+}
+
+#quantity-text {
+    color: hsl(0, 0%, 100%);
+    font-size: 12px;
+}
+
 #cart-container {
     display: none;
-    /* display: grid; */
     position: absolute;
     top: 90px;
     left: 960px;

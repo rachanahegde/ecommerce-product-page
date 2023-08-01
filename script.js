@@ -96,6 +96,15 @@ plusButton.addEventListener("click", (event) => {
   inputField.value = currentValue + 1; // Increase value in input field by 1
 });
 
+// Remove the cart amount number displayed above cart icon
+function removeAmt() {
+  const quantityInfo = document.getElementById("quantity");
+  if (quantityInfo !== null) {
+    const parentDiv = quantityInfo.parentNode;
+    parentDiv.removeChild(quantityInfo);
+  }
+}
+
 function emptyCart() {
   // If the cart is now empty, display empty cart text and hide the checkout button
   const emptyTextDiv = document.createElement("div");
@@ -105,6 +114,9 @@ function emptyCart() {
 
   // Hide the checkout button
   checkoutBtn.style.display = "none";
+
+  // Remove the cart amount number displayed above cart icon
+  removeAmt();
 }
 
 if (!cartItemsEl.hasChildNodes()) {
@@ -117,6 +129,9 @@ updateCartBtn.addEventListener("click", (event) => {
     // Remove existing product from cart and update it with new quantities of product
     if (cartItemsEl.hasChildNodes()) {
       cartItemsEl.removeChild(cartItemsEl.firstChild);
+
+      // Remove the cart amount number displayed above cart icon
+      removeAmt();
     }
 
     // Get product name, price, quantity, and calculate total
@@ -174,7 +189,19 @@ updateCartBtn.addEventListener("click", (event) => {
     // Append cart-item to the parent container
     cartItemsEl.appendChild(cartItem);
 
-    // TODO Remove items from cart
+    // Update cart icon with number indicating amount of items in cart
+    const quantityDiv = document.createElement("div");
+    quantityDiv.id = "quantity";
+
+    const quantityText = document.createElement("p");
+    quantityText.id = "quantity-text";
+    quantityText.textContent = quantity;
+    quantityDiv.appendChild(quantityText);
+
+    const mainEl = document.querySelector("main");
+    const firstChild = mainEl.firstChild;
+    mainEl.insertBefore(quantityDiv, firstChild);
+
     let trash = document.querySelector("#trash-icon");
     trash.addEventListener("click", (event) => {
       const trashedItem = trashIcon.parentNode.parentNode; // Get the parent of the parent of the trash icon, which is the cart item
@@ -195,10 +222,6 @@ cart.addEventListener("click", (event) => {
     cartContainer.style.display = "";
   }
 });
-
-// TODO ADD NUMBER TO SHOPPING CART ICON INDICATING NUMBER OF ITEMS IN CART
-//--- This number should update depending on quantity variable
-//--- Number should disappear when cart is empty
 
 // ---------------------------------------------------------------------------
 
