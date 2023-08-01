@@ -14,6 +14,7 @@ const cartItemsEl = document.getElementById("cart-items");
 const cart = document.getElementById("nav-cart-icon");
 const cartContainer = document.getElementById("cart-container");
 const checkoutBtn = document.getElementById("checkout-btn");
+const navIcons = document.getElementsByClassName("nav-icons")[0];
 
 // MODAL/LIGHTBOX FUNCTIONALITY
 
@@ -100,8 +101,9 @@ plusButton.addEventListener("click", (event) => {
 function removeAmt() {
   const quantityInfo = document.getElementById("quantity");
   if (quantityInfo !== null) {
-    const parentDiv = quantityInfo.parentNode;
-    parentDiv.removeChild(quantityInfo);
+    const secondChild = navIcons.children[1];
+    console.log(secondChild);
+    navIcons.removeChild(secondChild);
   }
 }
 
@@ -198,9 +200,10 @@ updateCartBtn.addEventListener("click", (event) => {
     quantityText.textContent = quantity;
     quantityDiv.appendChild(quantityText);
 
-    const mainEl = document.querySelector("main");
-    const firstChild = mainEl.firstChild;
-    mainEl.insertBefore(quantityDiv, firstChild);
+    // Append the quantityDiv to the nav-icons div after nav-cart-icon
+    const navIconsDiv = document.getElementsByClassName("nav-icons")[0];
+    const secondChild = navIconsDiv.children[1];
+    navIconsDiv.insertBefore(quantityDiv, secondChild);
 
     let trash = document.querySelector("#trash-icon");
     trash.addEventListener("click", (event) => {

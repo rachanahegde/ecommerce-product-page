@@ -100,12 +100,18 @@ nav {
     align-items: center;
 }
 
+#nav-cart-icon {
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+}
+
 #nav-cart-icon:hover{
     cursor: pointer;
     filter: brightness(0) saturate(100%) invert(9%) sepia(6%) saturate(1687%) hue-rotate(178deg) brightness(99%) contrast(91%);
 }
 
 #profile {
+    grid-column: 2 / 2;
     width: 50px;
 }
 
@@ -390,15 +396,17 @@ nav {
 }
 
 /* QUANTITY CONTAINER */
-
 #quantity {
+    /* Using grid to prevent the number from moving when browser is resized */
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+    position: relative;
+    left: 25px;
+    bottom: 10px;
+    z-index: 2;
     display: grid;
     justify-content: center;
     align-content: center;
-    z-index: 1;
-    position: absolute;
-    right: 272px;
-    top: 32px;
     background-color: hsl(26, 100%, 55%);
     width: 23px;
     height: 15px;
@@ -510,16 +518,20 @@ nav {
     font-size: 14px;
 }
 
-/* MEDIA QUERIES FOR DESKTOP COMPUTER */
-/* @media all and (min-width: 1450px) and (max-width: 1520px) {
-    #quantity {
-        position: relative;
-        left: 1160px;
-        top: -80px;
-    }
-} */
-
 /* MEDIA QUERIES FOR TABLET */
+@media all and (max-width: 1360px) {
+    /* body {
+        background-color: red;
+    } */
+}
+
+/* TODO 
+SET THE <MAIN> ELEMENT TO DISPLAY WITH CSS GRID 
+THEN MAKE SURE THERE IS ONLY ONE ROW AND ONE COLUMN
+THEN SET THE .CART-CONTAINER TO BE POSITIONED RELATIVELY
+AND MAKE SURE THAT IT IS ALSO WITHIN THE SAME ROW/COLUMN
+*/
+
 
 /* MEDIA QUERIES FOR MOBILE */
 
