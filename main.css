@@ -302,7 +302,6 @@ nav {
     align-items: center;
 }
 
-
 .discount-background {
     background-color: hsl(25, 100%, 94%);
     width: 50px;
@@ -349,7 +348,6 @@ nav {
     color: hsl(220, 13%, 13%);
     font-weight: 700;
     width: 20px;
-    justify-self: center;
 }
 
 #minus, #plus {
@@ -512,9 +510,8 @@ nav {
     font-size: 14px;
 }
 
-
-
 /* MEDIA QUERIES FOR TABLET */
+
 /* MEDIA QUERIES FOR MOBILE */
 
 /* TODO Check desktop version (1440 px) */
