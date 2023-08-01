@@ -664,7 +664,14 @@ nav {
 
 /* MEDIA QUERIES FOR MOBILE */
 @media all and (max-width: 375px) {
+    /* TODO Side Nav Menu Bar */
     
+
+    /* Add the opacity */
+
+    /* TODO Alter Modal */
+
+    /* TODO Change CSS grid to organise content in ROWS not columns  */
 } 
 
 
