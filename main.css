@@ -519,10 +519,10 @@ nav {
 }
 
 /* MEDIA QUERIES FOR TABLET */
-@media all and (max-width: 1360px) {
-    /* body {
+@media all and (max-width: 1300px) {
+    body {
         background-color: red;
-    } */
+    }
 }
 
 /* TODO 
