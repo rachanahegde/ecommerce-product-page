@@ -680,18 +680,69 @@ nav {
         display: none;
     }
 
+    /* TODO MAIN CONTAINER */
+
+    .container {
+        width: 100vw;
+    }
+
     /* TODO Side Nav Menu Bar */
     nav {
+        width: 350px;
         grid-template-columns: repeat(4, auto);
         margin-top: 15px;
     }
 
     #menu-icon {
-        display: block;
+        display: flex;
+        padding-top: 4px;
+        margin-left: 20px;
+    }
+
+    #logo {
+        margin-left: 10px;
+    }
+
+    .nav-icons {
+        margin-left: 120px;
+        grid-template-columns: 25px 25px;
+    }
+
+    #profile {
+        width: 25px;
+    }
+
+    .nav-links {
+        grid-template-rows: repeat(5, 50px);
     }
 
     .nav-link {
-        display: none;
+        justify-self: left;
+    }
+
+    #nav-link1 {
+        grid-row: 1;
+    }
+
+    #nav-link2 {
+        grid-row: 2;
+    } 
+
+    #nav-link3 {
+        grid-row: 3;
+    }   
+
+    #nav-link4 {
+        grid-row: 4;
+    }   
+
+    #nav-link5 {
+        grid-row: 5;
+    }  
+
+    .nav-link:hover {
+        border-bottom: none;
+        margin-bottom: none;
     }
 
     .sidenav {
@@ -710,7 +761,7 @@ nav {
     .sidenav a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
-        font-size: 14px;
+        font-size: 18px;
         color: hsl(220, 13%, 13%);
         font-weight: 700;
         display: block;
