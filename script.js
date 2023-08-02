@@ -15,6 +15,7 @@ const cart = document.getElementById("nav-cart-icon");
 const cartContainer = document.getElementById("cart-container");
 const checkoutBtn = document.getElementById("checkout-btn");
 const navIcons = document.getElementsByClassName("nav-icons")[0];
+const sideNav = document.getElementById("mySidenav");
 
 // MODAL/LIGHTBOX FUNCTIONALITY
 
@@ -225,3 +226,13 @@ cart.addEventListener("click", (event) => {
     cartContainer.style.display = "";
   }
 });
+
+// MOBILE NAVIGATION
+// Open and close side nav menu
+function openNav() {
+  sideNav.style.width = "250px";
+}
+
+function closeNav() {
+  sideNav.style.width = "0";
+}

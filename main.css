@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 
-/* General Styles */
+/* GENERAL STYLES */
 
 p {
     font-family: 'Kumbh Sans', sans-serif;
@@ -50,6 +50,8 @@ input {
 .main-hr {
     width: 80%;
 }
+
+/* MAIN CONTAINER */
 
 .container {
     grid-row: 1 / -1;
@@ -121,6 +123,16 @@ nav {
     cursor: pointer;
     border-radius: 50%;
     border: 1.5px solid hsl(26, 100%, 55%);
+}
+
+/* MOBILE NAV MENU SECTION */
+
+.closebtn {
+    display: none;
+}
+
+#menu-icon {
+    display: none;
 }
 
 /* LIGHTBOX IMAGE MODAL SECTION */
@@ -230,7 +242,7 @@ nav {
     outline: 2px solid hsl(26, 100%, 55%);
 }
 
-/* The Close Button */
+/* The Close Button in Modal */
 .close {
     position: relative;
     position: fixed;
@@ -664,8 +676,52 @@ nav {
 
 /* MEDIA QUERIES FOR MOBILE */
 @media all and (max-width: 375px) {
+    .main-hr {
+        display: none;
+    }
+
     /* TODO Side Nav Menu Bar */
-    
+    nav {
+        grid-template-columns: repeat(4, auto);
+        margin-top: 15px;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .nav-link {
+        display: none;
+    }
+
+    .sidenav {
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        width: 0;
+        top: 0;
+        left: 0;
+        background-color: hsl(0, 0%, 100%);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 14px;
+        color: hsl(220, 13%, 13%);
+        font-weight: 700;
+        display: block;
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        margin-left: 50px;
+    }
 
     /* Add the opacity */
 
