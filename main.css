@@ -792,7 +792,50 @@ nav {
     }
 
     /* TODO Alter Modal */
+    .modal-imgs, .img-controls {
+        display: none;
+    }
 
+    #myModal {
+        display: block;
+        grid-row: 1;
+        
+    }
+
+    /* TODO remove the styling for the.modal */
+
+    .modal {
+        position: static; /* Disable the 'position' style */
+        z-index: auto; /* Disable the 'z-index' style */
+        padding-top: 0; /* Disable the 'padding-top' style */
+        left: auto; /* Disable the 'left' style */
+        top: auto; /* Disable the 'top' style */
+        width: auto; /* Disable the 'width' style */
+        height: auto; /* Disable the 'height' style */
+        overflow: visible; /* Disable the 'overflow' style */
+        background-color: transparent; /* Disable the 'background-color' style */
+    }
+    
+
+    .close {
+        display: none;
+    }
+
+    .prev-btn, .next-btn {
+        top: 250px;
+    }
+
+    .next-btn {
+        left: 300px;
+    }
+
+    .prev-btn {
+        right: 300px;
+    }
+
+    /* TODO find a way to make .modal-content enabled...I think the JS code is interfering and setting it to display: none and is there a workaround for this?? */
+
+    /* TODO I could add another class to the modal content and enable this for mobile view specifically */
 
 
     /* TODO Change CSS grid to organise content in ROWS not columns  */
