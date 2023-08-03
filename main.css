@@ -62,7 +62,6 @@ input {
     margin: 0 auto;  /* For centering the container */
     margin-top: 75px;
     width: 60%;  /* For centering the container */
-    /* TODO should the width be 100vw? */
     justify-content: center;  /* For centering the container */
 }
 
@@ -127,8 +126,24 @@ nav {
 
 /* MOBILE NAV MENU SECTION */
 
+#nav-overlay {
+    display: none;
+    content: '';
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: hsl(0, 0%, 0%);
+    opacity: 0.75;
+}
+
 .closebtn {
     display: none;
+    filter: brightness(0) saturate(100%) invert(42%) sepia(12%) saturate(471%) hue-rotate(178deg) brightness(99%) contrast(84%);
 }
 
 #menu-icon {
@@ -214,7 +229,7 @@ nav {
     vertical-align: middle;  /* aligns thumbnail img in center of container */
 }
 
-/* Create overlay effect */
+/* Create overlay effect for thumbnail imgs */
 .column::before,
 .overlay::before {
     content: '';  /* makes it visible */
@@ -684,9 +699,11 @@ nav {
 
     .container {
         width: 100vw;
+        margin-top: 30px;
+        grid-template-rows: repeat(7, auto);
     }
 
-    /* TODO Side Nav Menu Bar */
+    /* Side Nav Menu Bar */
     nav {
         width: 350px;
         grid-template-columns: repeat(4, auto);
@@ -700,11 +717,11 @@ nav {
     }
 
     #logo {
-        margin-left: 10px;
+        margin-left: 15px;
     }
 
     .nav-icons {
-        margin-left: 120px;
+        margin-left: 90px;
         grid-template-columns: 25px 25px;
     }
 
@@ -748,14 +765,14 @@ nav {
     .sidenav {
         height: 100%;
         position: fixed;
-        z-index: 1;
+        z-index: 50;
         width: 0;
         top: 0;
         left: 0;
         background-color: hsl(0, 0%, 100%);
         overflow-x: hidden;
         transition: 0.5s;
-        padding-top: 60px;
+        padding-top: 90px;
     }
 
     .sidenav a {
@@ -768,19 +785,21 @@ nav {
     }
 
     .closebtn {
+        display: block;
         position: absolute;
-        top: 0;
-        right: 25px;
-        margin-left: 50px;
+        top: 25px;
+        left: 25px;
     }
 
-    /* Add the opacity */
-
     /* TODO Alter Modal */
+
+
 
     /* TODO Change CSS grid to organise content in ROWS not columns  */
 } 
 
+
+/* TODO Check that I haven't broken the desktop version of website */
 
 /* TODO Test on iphone using github pages */
 /* TODO Check that active states have all been set up - compare to the design files */

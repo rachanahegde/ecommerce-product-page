@@ -16,6 +16,7 @@ const cartContainer = document.getElementById("cart-container");
 const checkoutBtn = document.getElementById("checkout-btn");
 const navIcons = document.getElementsByClassName("nav-icons")[0];
 const sideNav = document.getElementById("mySidenav");
+const navOverlay = document.getElementById("nav-overlay");
 
 // MODAL/LIGHTBOX FUNCTIONALITY
 
@@ -231,8 +232,12 @@ cart.addEventListener("click", (event) => {
 // Open and close side nav menu
 function openNav() {
   sideNav.style.width = "250px";
+  // Display overlay
+  navOverlay.style.display = "block";
 }
 
 function closeNav() {
   sideNav.style.width = "0";
+  // Hide the overlay
+  navOverlay.style.display = "none";
 }
