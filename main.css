@@ -701,6 +701,7 @@ nav {
         width: 100vw;
         margin-top: 30px;
         grid-template-rows: repeat(7, auto);
+        grid-template-columns: 1fr;
     }
 
     /* Side Nav Menu Bar */
@@ -799,11 +800,10 @@ nav {
     #myModal {
         display: block;
         grid-row: 1;
-        
+        grid-column: 1;
     }
 
-    /* TODO remove the styling for the.modal */
-
+    /* Remove styling for .modal */
     .modal {
         position: static; /* Disable the 'position' style */
         z-index: auto; /* Disable the 'z-index' style */
