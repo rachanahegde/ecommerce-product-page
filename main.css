@@ -691,20 +691,24 @@ nav {
 
 /* MEDIA QUERIES FOR MOBILE */
 @media all and (max-width: 375px) {
+    body {
+        margin-left: 0;
+    }
+
     .main-hr {
         display: none;
     }
 
-    /* TODO MAIN CONTAINER */
+    /* MAIN CONTAINER */
 
     .container {
         width: 100vw;
-        margin-top: 30px;
+        margin-top: 26px;
         grid-template-rows: repeat(7, auto);
         grid-template-columns: 1fr;
     }
 
-    /* Side Nav Menu Bar */
+    /* SIDE NAV MENU BAR */
     nav {
         width: 350px;
         grid-template-columns: repeat(4, auto);
@@ -732,6 +736,7 @@ nav {
 
     .nav-links {
         grid-template-rows: repeat(5, 50px);
+        grid-template-columns: 1fr;
     }
 
     .nav-link {
@@ -792,7 +797,7 @@ nav {
         left: 25px;
     }
 
-    /* TODO Alter Modal */
+    /* MODAL SECTION */
     .modal-imgs, .img-controls {
         display: none;
     }
@@ -800,7 +805,6 @@ nav {
     #myModal {
         display: block;
         grid-row: 1;
-        grid-column: 1;
     }
 
     /* Remove styling for .modal */
@@ -816,28 +820,73 @@ nav {
         background-color: transparent; /* Disable the 'background-color' style */
     }
     
-
     .close {
         display: none;
     }
 
     .prev-btn, .next-btn {
-        top: 250px;
+        top: 190px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .prev, .next {
+        width: 10px;
     }
 
     .next-btn {
-        left: 300px;
+        left: 315px;
     }
 
     .prev-btn {
-        right: 300px;
+        right: 315px;
     }
 
-    /* TODO find a way to make .modal-content enabled...I think the JS code is interfering and setting it to display: none and is there a workaround for this?? */
+    .mySlides {
+        height: 300px;
+        overflow: hidden; /* Hide the overflowing content */
+    }
 
-    /* TODO I could add another class to the modal content and enable this for mobile view specifically */
+    .mySlides img {
+        width: 100%; /* Ensure the image fills the container horizontally */
+        height: auto; /* Maintain the image's aspect ratio */
+        border-radius: 0;
+    }
 
+    /* PRODUCT INFO SECTION */
 
+    /* TODO below code affects the sizing of the modal as well */
+    /* .product-info {
+        width: 350px;
+    } */
+
+    .company-name {
+        grid-row: 2;
+        justify-self: left;
+        margin-top: -10px;  /* TODO do i need this */
+    }
+
+    #product-name {
+        font-size: 27px;
+        grid-row: 3;
+    }
+
+    .sneaker-descrip {
+        grid-row: 4;
+    }
+      
+    .pricing-contrast {
+        grid-row: 5;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .update-amount {
+        grid-row: 6;
+    }
+
+    #update-cart {
+        grid-row: 7;
+    }
     /* TODO Change CSS grid to organise content in ROWS not columns  */
 } 
 
