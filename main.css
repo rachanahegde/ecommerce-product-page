@@ -511,11 +511,7 @@ nav {
     grid-template-rows: repeat(2, 25px);
 }
 
-.item-text {
-    align-self: center;
-}
-
-.item-cost {
+.item-text, .item-cost {
     align-self: center;
 }
 
@@ -922,6 +918,59 @@ nav {
     #quantity {
         left: 10px;
     }
+
+    #cart-container {
+        top: 75px;
+        left: 10px;
+        width: 350px;
+        height: 250px;
+    }
+
+    .cart-hr {
+        width: 350px;
+    }
+
+    .shopping-cart-text {
+        font-size: 18px;
+        align-self: center;
+    }
+
+    #empty-cart-text {
+        margin: 0;
+    }
+    
+    #empty-text {
+        font-size: 18px;
+    }
+
+    /* Cart item */
+
+    #cart-items {
+        justify-self: center;
+    }
+
+    .cart-item {
+        grid-template-columns: repeat(3, auto);
+        width: 330px;
+        column-gap: 15px;
+    }
+
+    .cart-item-img {
+        width: 45px;
+    }
+
+    .item-text p, .item-cost p {
+        font-size: 16px;
+    }
+
+    #trash-icon {
+        width: 15px;
+    }
+
+    /* Checkout button */
+    #checkout-btn  {
+        margin-bottom: 15px;
+    }
 } 
 
 
@@ -932,6 +981,5 @@ nav {
 
 /*
 TODO Your users should be able to:
-- View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 */

@@ -207,6 +207,10 @@ updateCartBtn.addEventListener("click", (event) => {
     const secondChild = navIconsDiv.children[1];
     navIconsDiv.insertBefore(quantityDiv, secondChild);
 
+    // Display checkout button
+    checkoutBtn.style.display = "flex";
+
+    // Delete item from cart
     let trash = document.querySelector("#trash-icon");
     trash.addEventListener("click", (event) => {
       const trashedItem = trashIcon.parentNode.parentNode; // Get the parent of the parent of the trash icon, which is the cart item
