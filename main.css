@@ -382,6 +382,8 @@ nav {
     color: hsl(220, 13%, 13%);
     font-weight: 700;
     width: 20px;
+    display: flex;
+    justify-self: center;
 }
 
 #minus, #plus {
@@ -855,15 +857,15 @@ nav {
 
     /* PRODUCT INFO SECTION */
 
-    /* TODO below code affects the sizing of the modal as well */
-    /* .product-info {
-        width: 350px;
-    } */
+    .product-info {
+        width: 330px;
+        margin-top: -15px;  /* TODO do i need this */
+        margin-left: 20px;
+    }
 
     .company-name {
         grid-row: 2;
         justify-self: left;
-        margin-top: -10px;  /* TODO do i need this */
     }
 
     #product-name {
@@ -878,16 +880,48 @@ nav {
     .pricing-contrast {
         grid-row: 5;
         grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 0;
+        margin-top: -15px;
+    }
+
+    .original-price {
+        position: relative;
+        top: 13px;
+        left: 25px;
+    }
+
+    /* ADD TO CART SECTION */
+
+    .add-product {
+        grid-template-columns: 1fr;
+        margin-top: -20px;
     }
 
     .update-amount {
         grid-row: 6;
+        width: 330px;
+        grid-template-columns: repeat(3, 70px);
+    }
+
+    #minus {
+        justify-self: left;
+    }
+
+    #plus {
+        justify-self: right;
     }
 
     #update-cart {
         grid-row: 7;
+        width: 330px;
+        height: 50px;
+        margin-top: 20px;
     }
-    /* TODO Change CSS grid to organise content in ROWS not columns  */
+
+    /* CART CONTAINER */
+    #quantity {
+        left: 10px;
+    }
 } 
 
 
