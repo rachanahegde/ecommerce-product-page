@@ -25,6 +25,25 @@ Users should be able to:
 
 ### Screenshots - Mobile
 
-<img src="/screenshots/Ecommerce-Page-iPhone.jpeg" width="350" display="inline-block"/><img src="/screenshots/Ecommerce-Page-Phone-Full-Cart.jpeg" width="350" display="inline-block"/><img src="/screenshots/Ecommerce-Page-Phone-Empty-Cart.jpeg" width="350" display="inline-block"/>
+<img src="/screenshots/Ecommerce-Page-iPhone.jpeg" width="300" display="inline-block"/>  <img src="/screenshots/Ecommerce-Page-Phone-Full-Cart.jpeg" width="300" display="inline-block"/>  <img src="/screenshots/Ecommerce-Page-Phone-Empty-Cart.jpeg" width="300" display="inline-block"/>
 
+### Links
+
+- Live Site URL: [Website](https://rachanahegde.github.io/ecommerce-product-page/)
+
+## My process
+
+### What I learned
+This project was a great opportunity to learn how to set up modal/lightbox functionality
+
+
+### Useful resources
+
+- [The Complete JavaScript Course](https://www.udemy.com/course/the-complete-javascript-course/) 
+
+## Author
+
+- Website - [Rachana Hegde](http://rachanahegde.squarespace.com/)
+- Twitter - [@Rachana\_\_H](https://twitter.com/Rachana__H)
+- Frontend Mentor - [@rachanahegde](https://www.frontendmentor.io/profile/rachanahegde)
 
