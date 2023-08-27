@@ -18,9 +18,15 @@ Users should be able to:
 
 ### Screenshots - Desktop
 
-<img src="/screenshots/Ecommerce-Page-Laptop.jpeg" width="600"/>
+<img src="/screenshots/Ecommerce-Page-Laptop.jpeg" width="650"/>
+<img src="/screenshots/Ecommerce-Page-Laptop-Lightbox.jpeg" width="650"/>
+<img src="/screenshots/Ecommerce-Page-Laptop-Full-Cart.jpeg" width="650"/>
+<img src="/screenshots/Ecommerce-Page-Laptop-Empty-Cart.jpeg" width="650"/>
 
 ### Screenshots - Mobile
 
-<img src="/screenshots/age-calculator-mobile.PNG" width="350" display="inline-block"/> <img src="/screenshots/age-calculator-mobile-error.PNG" width="350" display="inline-block"/>
+<img src="/screenshots/Ecommerce-Page-iPhone.jpeg" width="350" display="inline-block"/> 
+<img src="/screenshots/Ecommerce-Page-Phone-Full-Cart.jpeg" width="350" display="inline-block"/>
+<img src="/screenshots/Ecommerce-Page-Phone-Empty-Cart.jpeg" width="350" display="inline-block"/>
+
 
