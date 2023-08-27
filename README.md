@@ -25,8 +25,6 @@ Users should be able to:
 
 ### Screenshots - Mobile
 
-<img src="/screenshots/Ecommerce-Page-iPhone.jpeg" width="350" display="inline-block"/> 
-<img src="/screenshots/Ecommerce-Page-Phone-Full-Cart.jpeg" width="350" display="inline-block"/>
-<img src="/screenshots/Ecommerce-Page-Phone-Empty-Cart.jpeg" width="350" display="inline-block"/>
+<img src="/screenshots/Ecommerce-Page-iPhone.jpeg" width="350" display="inline-block"/><img src="/screenshots/Ecommerce-Page-Phone-Full-Cart.jpeg" width="350" display="inline-block"/><img src="/screenshots/Ecommerce-Page-Phone-Empty-Cart.jpeg" width="350" display="inline-block"/>
 
 
