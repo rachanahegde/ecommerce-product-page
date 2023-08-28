@@ -38,22 +38,13 @@ This project was a great opportunity to learn how to set up modal/lightbox funct
 
 I used <a href="https://stackoverflow.com/questions/61514041/how-to-use-javascript-to-dynamically-add-content-to-list-in-shopping-cart-menu">this</a> code as a starting point for understanding how to set up the shopping cart functionality in conjunction with <a href="https://stackoverflow.com/questions/52125163/how-to-create-a-minus-and-plus-button-to-update-a-field">this</a> on creating minus and plus buttons that update the field of a form.
 
-To set up the mobile navigation menu as a sidebar, I turned to w3schools again and <a href="https://www.w3schools.com/howto/howto_js_sidenav.asp">this article</a> was incredibly helpful. I also found <a href="https://stackoverflow.com/questions/46082016/overlay-when-i-open-slide-out-menu"a Stack Overflow post</a> on adding an overlay when the nav bar is opened.
-
-Changing the color of the SVG icons on hover 
-
-https://www.reddit.com/r/webdev/comments/ppm6io/changing_the_color_of_an_svg_image_with_css_on/
-
-https://css-tricks.com/cascading-svg-fill-color/
-
-https://codepen.io/sosuke/pen/Pjoqqp
-
-[https://convertingcolors.com/hsl-color-25_100_94.html?search=hsl(25, 100%, 94%)](https://convertingcolors.com/hsl-color-25_100_94.html?search=hsl(25,%20100%25,%2094%25))
+To set up the mobile navigation menu as a sidebar, I turned to w3schools again and <a href="https://www.w3schools.com/howto/howto_js_sidenav.asp">this article</a> was incredibly helpful. I also found <a href="https://stackoverflow.com/questions/46082016/overlay-when-i-open-slide-out-menu"> a Stack Overflow post</a> on adding an overlay when the nav bar is opened.
 
 ### Useful resources
 
 - [The Complete JavaScript Course](https://www.udemy.com/course/the-complete-javascript-course/) 
 - [Adding a shadow to a button with CSS](https://www.shecodes.io/athena/21966-how-to-add-a-shadow-to-a-button-in-css#:~:text=To)
+- Useful articles for changing the color of the SVG icons on hover: <a href="https://codepen.io/sosuke/pen/Pjoqqp"> CSS filter generator to convert from black to target hex color </a>, <a href="https://convertingcolors.com/hsl-color-25_100_94.html">Converting color to different formats</a>, <a href="https://www.reddit.com/r/webdev/comments/ppm6io/changing_the_color_of_an_svg_image_with_css_on/?rdt=56361"> Reddit post on changing the color of an SVG image with CSS on hover</a>,<a href="https://css-tricks.com/cascading-svg-fill-color/">CSS Tricks article on Cascading SVG fill color</a>.
 
 ## Author
 
