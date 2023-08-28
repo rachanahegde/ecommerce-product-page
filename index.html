@@ -12,10 +12,10 @@
   <!-- Navigation bar -->
   <nav>
     <!-- Logo -->
-    <img src="./images/icon-menu.svg" id="menu-icon" onclick="openNav()"></img>
-    <img src="./images/logo.svg" alt="" class="nav-bar" id="logo">
+    <img src="./images/icon-menu.svg" id="menu-icon" onclick="openNav()" alt="menu"></img>
+    <img src="./images/logo.svg" alt="" class="nav-bar" id="logo" alt="logo">
     <div id="mySidenav" class="nav-links sidenav">
-      <img src="./images/icon-close.svg" class="closebtn" onclick="closeNav()"></img>
+      <img src="./images/icon-close.svg" alt="Close icon" class="closebtn" onclick="closeNav()"></img>
       <a href="" class="nav-bar nav-link" id="nav-link1">Collections</a>
       <a href="" class="nav-bar nav-link" id="nav-link2">Men</a>
       <a href="" class="nav-bar nav-link" id="nav-link3">Women</a>
@@ -46,19 +46,19 @@
         <!-- Images used to open the lightbox -->
         <div class="lightbox-images">
           <div class="column" onclick="openModal();currentSlide(1)">
-            <img src="./images/image-product-1-thumbnail.jpg" class="thumbnail-img" id="main-thumbnail">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="" class="thumbnail-img" id="main-thumbnail">
           </div>
 
           <div class="column" onclick="openModal();currentSlide(2)">
-            <img src="./images/image-product-2-thumbnail.jpg" class="thumbnail-img">
+            <img src="./images/image-product-2-thumbnail.jpg" alt="" class="thumbnail-img">
           </div>
 
           <div class="column" onclick="openModal();currentSlide(3)">
-            <img src="./images/image-product-3-thumbnail.jpg" class="thumbnail-img">
+            <img src="./images/image-product-3-thumbnail.jpg" alt="" class="thumbnail-img">
           </div>
 
           <div class="column" onclick="openModal();currentSlide(4)" >
-            <img src="./images/image-product-4-thumbnail.jpg" class="thumbnail-img">
+            <img src="./images/image-product-4-thumbnail.jpg" alt="" class="thumbnail-img">
           </div>
         </div>
       </div>
@@ -68,27 +68,27 @@
         <img src="./images/icon-close.svg" class="close cursor" onclick="closeModal()"></img>
         <div class="modal-content">
           <div class="mySlides">
-            <img src="./images/image-product-1.jpg">
+            <img src="./images/image-product-1.jpg" alt="">
           </div>
       
           <div class="mySlides">
-            <img src="./images/image-product-2.jpg">
+            <img src="./images/image-product-2.jpg" alt="">
           </div>
       
           <div class="mySlides">
-            <img src="./images/image-product-3.jpg">
+            <img src="./images/image-product-3.jpg" alt="">
           </div>
       
           <div class="mySlides">
-            <img src="./images/image-product-4.jpg">
+            <img src="./images/image-product-4.jpg" alt="">
           </div>
 
           <!-- Next/previous controls --> 
           <div class="prev-btn">
-            <img src="./images/icon-previous.svg" class="prev" onclick="plusSlides(-1)"> </img>
+            <img src="./images/icon-previous.svg" alt="" class="prev" onclick="plusSlides(-1)"> </img>
           </div>
           <div class="next-btn">
-            <img src="./images/icon-next.svg" class="next" onclick="plusSlides(1)"> </img>
+            <img src="./images/icon-next.svg" alt="" class="next" onclick="plusSlides(1)"> </img>
           </div>
 
           <!-- Thumbnail image controls -->
@@ -133,12 +133,12 @@
         <!-- Add item to cart functionality -->
         <div class="add-product">
           <div class="update-amount">
-            <button id="minus"><img src="./images/icon-minus.svg"></button>  
-            <input value="0" id="input"/>
-            <button id="plus"><img src="./images/icon-plus.svg"></button>  
+            <button id="minus" aria-label="Minus Button"><img src="./images/icon-minus.svg" alt="Minus Button"></button>  
+            <input value="0" label="" id="input"/>
+            <button id="plus" aria-label="Plus Button"><img src="./images/icon-plus.svg" alt="Plus Button"></button>  
           </div>
 
-          <button id="update-cart"> <img src="./images/icon-cart.svg" id="cart-icon"><p class="cart-text">Add to cart</p></button>
+          <button id="update-cart"> <img src="./images/icon-cart.svg" id="cart-icon" alt=""><p class="cart-text">Add to cart</p></button>
         </div>
 
       </div>
